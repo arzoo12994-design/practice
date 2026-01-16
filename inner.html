@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inner Page</title>
+  <link rel="stylesheet" href="inner2.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="left">
+    <button class="menu-btn" id="menuToggle">☰</button>
+    <img src="Images/logo.svg" alt="logo" />
+    <input type="text" placeholder="Search" />
+  </div>
+  <div class="right">
+    <img src="Images/notification-icon.svg" alt="notification"/>
+    <img src="Images/profile.png" alt="profile"/>
+    <h5>johndoe</h5>
+  </div>
+</header>
+
+<div class="wrapper">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="#">Dashboard</a>
+    <a class="active" href="#">Analysis</a>
+    <a href="#">Inbox</a>
+    <a href="#">History</a>
+    <a href="#">Users</a>
+    <a href="#">Maintenance</a>
+    <a href="#">Settings</a>
+  </aside>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <main class="content">
+    <h1 class="analysis">Analysis</h1>
+
+    <!-- ONE COLUMN -->
+    <section>
+  <h3>One Column</h3>
+  <div class="grid one">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" placeholder=" " />
+    </div>
+    <div class="field">
+      <label>Dropdown</label>
+      <select>
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Multiple line</label>
+      <textarea placeholder=" "></textarea>
+    </div>
+  </div>
+</section>
+<!--  -->
+
+    <!-- TWO COLUMN -->
+    <section>
+  <h3>Two Column</h3>
+  <div class="grid two">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" placeholder=" " />
+    </div>
+    <div class="field">
+      <label>Gender</label>
+      <select>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" placeholder=" " />
+    </div>
+    <div class="field">
+      <label>Yes/No Option</label>
+      <select>
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+
+    <!-- THREE COLUMN -->
+    <section>
+      <h3>Three Column</h3>
+      <div class="grid three">
+        <div class="field error">
+          <label>Focus</label>
+          <input type="text" placeholder=" " />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" value="password123" placeholder=" " />
+        </div>
+        <div class="field disabled">
+          <label>Disabled</label>
+          <input type="text" value="johndoe" placeholder=" " disabled />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUR COLUMN -->
+    <section>
+      <h3>Four Column</h3>
+      <div class="four-column-form">
+        <div class="field error">
+          <label>Designation</label>
+          <input type="text" value="UI Designer" placeholder=" " />
+          <small class="error-text">Enter valid data</small>
+        </div>
+        <div class="field">
+          <label>Name</label>
+          <input type="text" placeholder=" " />
+          <small class="helper-text">Enter your full name as per ID</small>
+        </div>
+        <div class="field">
+          <label>Username</label>
+          <input type="text" value="johndoe" placeholder=" " />
+        </div>
+        <div class="field">
+          <label>Select</label>
+          <select>
+            <option>Select</option>
+            <option>Admin</option>
+            <option>User</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER DESIGN ELEMENTS -->
+    <section class="other-elements">
+      <h3>Other Design Elements</h3>
+
+      <div class="form-group">
+        <label>File Upload</label>
+        <div class="file-upload">
+          <button class="upload-btn">
+            <img src="Images/cloud-upload-icon.svg"/> Upload
+          </button>
+          <span>No item selected</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Radio Button</label>
+        <div class="options vertical">
+          <label><input type="radio" name="r"/> Option 1</label>
+          <label><input type="radio" name="r" checked/> Option 2</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Checkbox</label>
+        <div class="options vertical">
+          <label><input type="checkbox"/> Option 1</label>
+          <label><input type="checkbox" checked/> Option 2</label>
+        </div>
+      </div>
+
+      <div class="snackbar-grid">
+        <div class="snackbar error">❌ This is an error Message</div>
+        <div class="snackbar info">ℹ️ This is an information message!</div>
+        <div class="snackbar warn">⚠️ This is a warning message!</div>
+        <div class="snackbar success">✅ This is a Success message!</div>
+      </div>
+
+      <div class="buttons">
+        <button class="primary">Primary</button>
+        <button class="secondary">Secondary</button>
+      </div>
+
+      <div class="tabs">
+        <span class="active">Tab 1</span>
+        <span>Tab 2</span>
+        <span>Tab 3</span>
+      </div>
+
+      <p class="text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const menuBtn = document.getElementById("menuToggle");
+  const sidebar = document.getElementById("sidebar");
+  const backdrop = document.getElementById("sidebarBackdrop");
+
+  menuBtn.onclick = () => {
+    sidebar.classList.add("show");
+    backdrop.classList.add("show");
+  };
+  backdrop.onclick = () => {
+    sidebar.classList.remove("show");
+    backdrop.classList.remove("show");
+  };
+</script>
+
+</body>
+</html>

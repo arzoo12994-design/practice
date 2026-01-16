@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Mobile first */
+/*.hero-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+}*/
+
+/* Tablet */
+/*@media (min-width: 768px) {
+  .hero-image {
+    width: 300px;
+    height: 300px;
+  }
+}*/
+
+/* Laptop & desktop */
+/*@media (min-width: 992px) {
+  .hero-image {
+    width: 380px;
+    height: 380px;
+  }
+}*/
